@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<company>
+    <staff id="1001">
+        <firstname>John</firstname>
+        <lastname>Ioannou</lastname>
+        <nickname></nickname>
+        <salary currency="USD">10000</salary>
+    </staff>
+    <staff id="2001">
+        <firstname>Peter</firstname>
+        <lastname>Peter</lastname>
+        <nickname>Pet</nickname>
+        <salary currency="USD">8000</salary>
+    </staff>
+    <staff id="1001">
+        <firstname>John</firstname>
+        <firstname>Nick</firstname>
+        <lastname>Ioannou</lastname>
+        <nickname></nickname>
+        <salary currency="USD">10000</salary>
+    </staff>
+    <staff id="2001">
+        <firstname>Peter</firstname>
+        <lastname>Peter</lastname>
+        <nickname>Pet</nickname>
+        <salary currency="USD">8000</salary>
+    </staff>
+    <staff id="1001">
+        <firstname>John</firstname>
+        <lastname>Ioannou</lastname>
+        <nickname></nickname>
+        <salary currency="USD">10000</salary>
+    </staff>
+    <staff id="2001">
+        <firstname>Peter</firstname>
+        <lastname>Peter</lastname>
+        <nickname>Pet</nickname>
+        <salary currency="USD">8000</salary>
+    </staff>
+</company>
