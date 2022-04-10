@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<company>
+    <staff>
+        <name code="45">Alexis</name>
+        <salary>ab</salary>
+    </staff>
+    <staff/>
+</company>

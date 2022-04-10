@@ -17,36 +17,26 @@ public class ReadXmlStAXCursorParser {
     private static final String FILENAME = "xml_files\\company.xml";
 
     public static void main(String[] args) {
-
         try {
-
             printXmlByXmlCursorReader(Paths.get(FILENAME));
-
         } catch (FileNotFoundException | XMLStreamException e) {
             e.printStackTrace();
         }
-
     }
 
-    private static void printXmlByXmlCursorReader(Path path)
-            throws FileNotFoundException, XMLStreamException {
+    private static void printXmlByXmlCursorReader(Path path)  throws FileNotFoundException, XMLStreamException {
 
         XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
-        XMLStreamReader reader = xmlInputFactory.createXMLStreamReader(
-                new FileInputStream(path.toFile()));
+        XMLStreamReader reader = xmlInputFactory.createXMLStreamReader(  new FileInputStream(path.toFile()));
 
         int eventType = reader.getEventType();
         System.out.println(eventType);   // 7, START_DOCUMENT
         System.out.println(reader);      // xerces
 
         while (reader.hasNext()) {
-
             eventType = reader.next();
-
             if (eventType == XMLEvent.START_ELEMENT) {
-
                 switch (reader.getName().getLocalPart()) {
-
                     case "staff":
                         String id = reader.getAttributeValue(null, "id");
                         System.out.printf("Staff id : %s%n", id);

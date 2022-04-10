@@ -20,30 +20,24 @@ public class ReadXmlStAXEventParser {
     public static void main(String[] args) {
 
         try {
-
             printXmlByXmlEventReader(Paths.get(FILENAME));
 
         } catch (FileNotFoundException | XMLStreamException e) {
             e.printStackTrace();
         }
-
     }
 
     private static void printXmlByXmlEventReader(Path path)
             throws FileNotFoundException, XMLStreamException {
 
         XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
-        XMLEventReader reader = xmlInputFactory.createXMLEventReader(
-                new FileInputStream(path.toFile()));
+        XMLEventReader reader = xmlInputFactory.createXMLEventReader( new FileInputStream(path.toFile()));
 
         // event iterator
         while (reader.hasNext()) {
-
             XMLEvent event = reader.nextEvent();
-
             if (event.isStartElement()) {
-
-                StartElement element = event.asStartElement();
+              StartElement element = event.asStartElement();
 
                 switch (element.getName().getLocalPart()) {
                     // if <staff>
@@ -95,9 +89,6 @@ public class ReadXmlStAXEventParser {
                     System.out.printf("%n%s%n%n", "---");
                 }
             }
-
         }
-
     }
-
 }

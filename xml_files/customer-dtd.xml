@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Customers
+[
+    <!ELEMENT Customers (Customer*)>
+        <!ELEMENT Customer (name, surname)>
+            <!ELEMENT name (#PCDATA)>
+            <!ELEMENT surname (#PCDATA)>
+ ]>
+<Customers>
+    <Customer>
+        <name>D</name>
+        <surname>I</surname>
+    </Customer>
+    <Customer>
+        <name>A</name>
+        <surname>B</surname>
+    </Customer>
+    <Customer>
+        <name>S</name>
+        <surname>X</surname>
+    </Customer>
+</Customers>

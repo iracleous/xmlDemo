@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+     <xt:Customers
+            xmlns:xt="https://www.codehub.gr"
+            xmlns:xt2="https://www.codehub2.gr"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="https://www.codehub.gr customer-ns2.xsd
+            https://www.codehub2.gr customer-ns7.xsd" >
+
+       <xt:Customer>
+            <xt:name>D</xt:name>
+            <xt:surname>I</xt:surname>
+        </xt:Customer>
+        <xt:Customer>
+            <xt:name>A</xt:name>
+            <xt:surname>B</xt:surname>
+        </xt:Customer>
+        <xt:Customer>
+            <xt:name>S</xt:name>
+            <xt:surname>X</xt:surname>
+        </xt:Customer>
+
+    </xt:Customers>

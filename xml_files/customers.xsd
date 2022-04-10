@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" 
-        elementFormDefault="qualified">
-		
-    <element name="customers">
-        <complexType>
-            <sequence>
-                <element name="customer" minOccurs="0" maxOccurs="unbounded">
-                    <complexType>
-                        <sequence>
-                            <element name="firstName" type="string" />
-                            <element name="lastName" type="string" />
-                            <element name="email" type="string" />
-                            <element name="addresses" minOccurs="0">
-                                <complexType>
-                                    <sequence>
-                                        <element name="address" maxOccurs="unbounded">
-                                            <complexType>
-                                                <sequence>
-                                                    <element name="type" type="string" />
-                                                    <element name="street" type="string" />
-                                                    <element name="unit" type="string" nillable="true" />
-                                                    <element name="city" type="string" />
-                                                    <element name="state" type="string" />
-                                                    <element name="zip" type="string" />
-                                                </sequence>
-                                            </complexType>
-                                        </element>
-                                    </sequence>
-                                </complexType>
-                            </element>
-                        </sequence>
-                        <attribute name="id" type="long" use="required" />
-                    </complexType>
-                </element>
-            </sequence>
-        </complexType>
-    </element>
+
+<schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="customers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="customer" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="firstName" type="xs:string" />
+                            <xs:element name="lastName" type="xs:string" />
+                            <xs:element name="email" type="xs:string" />
+                            <xs:element name="addresses" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="address" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="type" type="xs:string" />
+                                                    <xs:element name="street" type="xs:string" />
+                                                    <xs:element name="unit" type="xs:string" nillable="true" />
+                                                    <xs:element name="city" type="xs:string" />
+                                                    <xs:element name="state" type="xs:string" />
+                                                    <xs:element name="zip" type="xs:string" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:long" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 		
 </schema>

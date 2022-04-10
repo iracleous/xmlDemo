@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+     <Customers
+            xmlns="https://www.codehub.gr"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="https://www.codehub.gr customer-ns.xsd">
+
+        <Customer>
+            <name>D</name>
+            <surname>I</surname>
+        </Customer>
+        <Customer>
+            <name>A</name>
+            <surname>B</surname>
+        </Customer>
+        <Customer>
+            <name>S</name>
+            <surname>X</surname>
+        </Customer>
+
+    </Customers>

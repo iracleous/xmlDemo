@@ -41,28 +41,26 @@ public class ReadXmlDomParser {
             System.out.println("------");
 
             // get <staff>
-          NodeList list = doc.getElementsByTagName("staff");
-            //     NodeList list = doc.getChildNodes();
-            //to do
-            //generic reader
+            NodeList list = doc.getElementsByTagName("staff");
 
             for (int temp = 0; temp < list.getLength(); temp++) {
+
                 Node node = list.item(temp);
+
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
+
                     Element element = (Element) node;
-
-
 
                     // get staff's attribute
                     String id = element.getAttribute("id");
+
                     // get text
                     String firstname = element.getElementsByTagName("firstname").item(0).getTextContent();
                     String lastname = element.getElementsByTagName("lastname").item(0).getTextContent();
                     String nickname = element.getElementsByTagName("nickname").item(0).getTextContent();
 
-                     NodeList salaryNodeList = element.getElementsByTagName("salary");
+                    NodeList salaryNodeList = element.getElementsByTagName("salary");
                     String salary = salaryNodeList.item(0).getTextContent();
-               //     String salary = element.getElementsByTagName("salary").item(0).getTextContent();
 
                     // get salary's attribute
                     String currency = salaryNodeList.item(0).getAttributes().getNamedItem("currency").getTextContent();
@@ -74,9 +72,6 @@ public class ReadXmlDomParser {
                     System.out.println("Nick Name : " + nickname);
                     System.out.printf("Salary [Currency] : %,.2f [%s]%n%n", Float.parseFloat(salary), currency);
 
-                }
-                else {
-                    System.out.println("This is notm an element");
                 }
             }
 

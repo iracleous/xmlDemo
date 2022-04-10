@@ -11,29 +11,14 @@ import lombok.*;
 
 import java.util.Arrays;
 
-//@XmlRootElement(name = "ekpaideomenos")
-//@XmlAccessorType(XmlAccessType.FIELD)
-//@XmlType(propOrder={"age", "name"})
 @XmlRootElement
-@Data@AllArgsConstructor
-@RequiredArgsConstructor
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Trainee {
-    
-    @XmlElement
-    @NonNull
+
     private String name;
-    
-//    @XmlAttribute
-    @XmlElement
-    @NonNull
     private int age;
-    
-    @XmlElementWrapper(name="hobbies")
-    @XmlElement(name="hobby")
-
-    private String[] hobbies = {"books", "movies"};
-
-
 
 }
 

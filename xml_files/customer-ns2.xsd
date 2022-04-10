@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://www.codehub.gr"
+           elementFormDefault="qualified">
+ 
+    <element name="Customers">
+        <complexType>
+            <sequence>
+                <element name="Customer"  minOccurs="0" maxOccurs="200">
+                    <complexType>
+                        <sequence>
+                            <element name="name" type="string"/>
+                            <element name="surname" type="string"/>
+                        </sequence>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>
+
+
