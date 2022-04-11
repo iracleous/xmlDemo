@@ -34,7 +34,7 @@ public class MyValidator {
             }
         });
         try {
-            Document doc = builder.parse("xm\\customers2.xml");
+            Document doc = builder.parse("xml_files/customer-ns.xml");
         } catch (SAXException e) {
             System.out.println(e);
         } catch (IOException e) {

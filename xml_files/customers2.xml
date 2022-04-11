@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <customers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                noNamespaceSchemaLocation="customers.xsd">
-
     <customer id="123">
         <firstName>Mike</firstName>
         <lastName>Nolan</lastName>
