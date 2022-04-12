@@ -76,7 +76,6 @@ public class MyValidator {
         SchemaFactory schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
         try {
             Schema schema = schemaFactory.newSchema(new File( schemaFile));
-
             Validator validator = schema.newValidator();
             validator.validate(new StreamSource(new File( xmlFile)));
             return true;

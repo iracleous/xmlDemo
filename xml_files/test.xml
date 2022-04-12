@@ -1,1 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><company><!--This is Staff 1001--><staff id="1001"><name>Dimitris</name><salary currency="USD">5000</salary><bio><![CDATA[HTML tag <code>testing</code>]]></bio></staff><staff id="1002"><name>Nickos</name><salary currency="EUR">8000</salary><bio><![CDATA[a & b]]></bio></staff></company>
+<?xml version="1.0" encoding="utf-8"?>
+	<company><!--This is Staff 100-->
+		<staff id="100">
+		<name>Dimitris</name>
+		<salary currency="USD">5000</salary>
+		<bio><![CDATA[HTML tag <code>testing</code>]]>
+		</bio>
+		</staff>
+		<staff id="1002">
+		<name>Nickos</name>
+		<salary currency="EUR">8000</salary>
+		<bio><![CDATA[a & b]]></bio>
+		</staff>
+		</company>

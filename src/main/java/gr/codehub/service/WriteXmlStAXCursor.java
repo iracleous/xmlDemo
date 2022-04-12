@@ -27,51 +27,63 @@ public class WriteXmlStAXCursor {
 
         writer.writeStartDocument("utf-8", "1.0");
 
+        writer.writeCharacters("\n\t");
         // <company>
         writer.writeStartElement("company");
 
         // <staff>
+        int staffId = 100;
+
+
         // add XML comment
-        writer.writeComment("This is Staff 1001");
-
+        writer.writeComment("This is Staff " + staffId);
+        writer.writeCharacters("\n\t\t");
         writer.writeStartElement("staff");
-        writer.writeAttribute("id", "1001");
-
+        writer.writeAttribute("id", staffId+"");
+        writer.writeCharacters("\n\t\t");
         writer.writeStartElement("name");
         writer.writeCharacters("Dimitris");
         writer.writeEndElement();
-
+        writer.writeCharacters("\n\t\t");
         writer.writeStartElement("salary");
         writer.writeAttribute("currency", "USD");
         writer.writeCharacters("5000");
         writer.writeEndElement();
-
+        writer.writeCharacters("\n\t\t");
         writer.writeStartElement("bio");
         writer.writeCData("HTML tag <code>testing</code>");
+        writer.writeCharacters("\n\t\t");
         writer.writeEndElement();
-
+        writer.writeCharacters("\n\t\t");
         writer.writeEndElement();
         // </staff>
 
         // <staff>
+        writer.writeCharacters("\n\t\t");
         writer.writeStartElement("staff");
         writer.writeAttribute("id", "1002");
 
+        writer.writeCharacters("\n\t\t");
         writer.writeStartElement("name");
         writer.writeCharacters("Nickos");
         writer.writeEndElement();
 
+        writer.writeCharacters("\n\t\t");
         writer.writeStartElement("salary");
         writer.writeAttribute("currency", "EUR");
         writer.writeCharacters("8000");
         writer.writeEndElement();
 
+        writer.writeCharacters("\n\t\t");
         writer.writeStartElement("bio");
         writer.writeCData("a & b");
         writer.writeEndElement();
 
+        writer.writeCharacters("\n\t\t");
         writer.writeEndElement();
         // </staff>
+
+        writer.writeCharacters("\n");
 
         writer.writeEndDocument();
         // </company>
