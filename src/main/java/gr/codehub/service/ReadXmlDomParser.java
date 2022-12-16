@@ -1,9 +1,6 @@
 package gr.codehub.service;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
+import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
 import javax.xml.XMLConstants;
@@ -23,14 +20,12 @@ public class ReadXmlDomParser {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
         try {
-
             // optional, but recommended
             // process XML securely, avoid attacks like XML External Entities (XXE)
             dbf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
 
             // parse XML file
             DocumentBuilder db = dbf.newDocumentBuilder();
-
             Document doc = db.parse(new File(FILENAME));
 
             // optional, but recommended
@@ -38,32 +33,31 @@ public class ReadXmlDomParser {
             doc.getDocumentElement().normalize();
 
             System.out.println("Root Element :" + doc.getDocumentElement().getNodeName());
-            System.out.println("------");
+            System.out.println("------------------------------------------");
 
             // get <staff>
             NodeList list = doc.getElementsByTagName("staff");
 
             for (int temp = 0; temp < list.getLength(); temp++) {
-
                 Node node = list.item(temp);
 
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
-
                     Element element = (Element) node;
-
                     // get staff's attribute
                     String id = element.getAttribute("id");
-
                     // get text
+
+
                     String firstname = element.getElementsByTagName("firstname").item(0).getTextContent();
                     String lastname = element.getElementsByTagName("lastname").item(0).getTextContent();
                     String nickname = element.getElementsByTagName("nickname").item(0).getTextContent();
-
-                    NodeList salaryNodeList = element.getElementsByTagName("salary");
-                    String salary = salaryNodeList.item(0).getTextContent();
+                    String salary = element.getElementsByTagName("salary").item(0).getTextContent();
+                    double salaryAsDouble = Double.parseDouble(salary);
+                    //     NodeList salaryNodeList = element.getElementsByTagName("salary");
+                    //     String salary = salaryNodeList.item(0).getTextContent();
 
                     // get salary's attribute
-                    String currency = salaryNodeList.item(0).getAttributes().getNamedItem("currency").getTextContent();
+                    String currency = element.getElementsByTagName("salary").item(0).getAttributes().getNamedItem("currency").getTextContent();
 
                     System.out.println("Current Element :" + node.getNodeName());
                     System.out.println("Staff Id : " + id);

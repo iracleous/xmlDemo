@@ -2,6 +2,8 @@
 <company>
     <staff id="1001">
         <firstname>John</firstname>
+        <firstname>Nick</firstname>
+        <firstname>George</firstname>
         <lastname>Ioannou</lastname>
         <nickname></nickname>
         <salary currency="USD">10000</salary>
